@@ -21,7 +21,7 @@ data = json.load(sys.stdin)
 # Setup default values
 host = data.get("host")
 # do not test if it is the same host
-oldHost = os.environ.get('TRAEFIK_HOST','')
+oldHost = os.environ.get('RELAY_HOST','')
 
 if host != oldHost and agent.http_route_in_use(domain=host):
     agent.set_status('validation-failed')
