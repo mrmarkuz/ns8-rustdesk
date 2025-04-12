@@ -22,7 +22,12 @@ ExecStartPre=/bin/rm -f %t/rustdesk.pid %t/rustdesk.pod-id
 ExecStartPre=/usr/bin/podman pod create --infra-conmon-pidfile %t/rustdesk.pid \
     --pod-id-file %t/rustdesk.pod-id \
     --name rustdesk \
-    --publish 127.0.0.1:${TCP_PORT}:80 \
+    --publish 21115:21115 \
+    --publish 21116:21116 \
+    --publish 21116:21116/udp \
+    --publish 21117:21117 \
+    --publish 21118:21118 \
+    --publish 21119:21119 \
     --replace
 ExecStart=/usr/bin/podman pod start --pod-id-file %t/rustdesk.pod-id
 ExecStop=/usr/bin/podman pod stop --ignore --pod-id-file %t/rustdesk.pod-id -t 10
