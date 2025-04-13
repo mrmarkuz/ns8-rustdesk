@@ -23,7 +23,7 @@ ExecStart=/usr/bin/podman run --conmon-pidfile %t/rustdesk-app.pid \
     --volume rustdesk-app:/data:Z \
     --env RELAY=${RELAY_HOST} \
     --env ENCRYPTED_ONLY=1 \
-    --env ALWAYS_USE_RELAY=Y \
+#    --env ALWAYS_USE_RELAY=Y \
     ${RUSTDESK_SERVER_S6_IMAGE}
 ExecStop=/usr/bin/podman stop --ignore --cidfile %t/rustdesk-app.ctr-id -t 10
 ExecReload=/usr/bin/podman kill -s HUP rustdesk-app
