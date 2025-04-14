@@ -24,6 +24,13 @@ Output example:
 
 Enter a FQDN to reach the RustDesk server.
 
+### Firewall
+
+NS8 firewall is configured by the app but if you use a firewall, following ports need to be forwarded to the NS8:
+
+- 21115-21119/tcp
+- 21116/udp
+
 ### Client
 
 Download a client from [RustDesk releases page](https://github.com/rustdesk/rustdesk/releases).
