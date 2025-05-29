@@ -39,7 +39,7 @@ buildah config --entrypoint=/ \
     --label="org.nethserver.authorizations=traefik@node:routeadm node:fwadm" \
     --label="org.nethserver.tcp-ports-demand=0" \
     --label="org.nethserver.rootfull=0" \
-    --label="org.nethserver.images=ghcr.io/rustdesk/rustdesk-server-s6:1.1.12" \
+    --label="org.nethserver.images=ghcr.io/rustdesk/rustdesk-server-s6:1.1.14" \
     "${container}"
 # Commit the image
 buildah commit "${container}" "${repobase}/${reponame}"
