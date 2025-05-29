@@ -43,7 +43,7 @@ response = agent.tasks.run(
         'instance': os.environ['MODULE_ID'] + '-id',
         'url':  'http://127.0.0.1:21118',
         'host': host,
-        'path': '/ws/id'
+        'path': '/ws/id',
         'http2https': h2hs,
         'lets_encrypt': le
     },
@@ -60,7 +60,7 @@ response = agent.tasks.run(
         'instance': os.environ['MODULE_ID'] + '-relay',
         'url':  'http://127.0.0.1:21119',
         'host': host,
-        'path': '/ws/relay'
+        'path': '/ws/relay',
         'http2https': h2hs,
         'lets_encrypt': le
     },
