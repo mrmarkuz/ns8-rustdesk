@@ -19,6 +19,8 @@ config = {}
 
 # Read current configuration from the environment file
 config["host"] = os.getenv("RELAY_HOST","")
+config["http2https"] = os.getenv("TRAEFIK_HTTP2HTTPS") == "True"
+config["lets_encrypt"] = os.getenv("TRAEFIK_LETS_ENCRYPT") == "True"
 
 # Dump the configuration to stdout
 json.dump(config, fp=sys.stdout)

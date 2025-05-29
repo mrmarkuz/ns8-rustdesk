@@ -9,12 +9,12 @@ import agent
 import os
 
 agent.add_public_service(os.environ['MODULE_ID'], [
-    "21115/tcp",
-    "21116/tcp",
-    "21116/udp",
-    "21117/tcp",
-    "21118/tcp",
-    "21119/tcp",
+    "21115/tcp", # hbbs NAT type test
+    "21116/tcp", # hbbs TCP hole punching and connection service
+    "21116/udp", # hbbs ID registration
+    "21117/tcp", # hbbr relay service
+#    "21118/tcp", # hbbs websocket - via traefik route
+#    "21119/tcp", # hbbr websocket - via traefik route
 ])
 
 # Ignore exit code
