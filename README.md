@@ -28,7 +28,7 @@ Enter a FQDN to reach the RustDesk server.
 
 NS8 firewall is configured by the app but if you use a firewall, following ports need to be forwarded to the NS8:
 
-- 21115-21119/tcp
+- 21115-21117/tcp
 - 21116/udp
 
 ### Client
@@ -42,6 +42,10 @@ Get the public key on NS8:
 Enter your RustDesk server name or IP and the key:
 
 ![grafik](https://github.com/user-attachments/assets/a0fc7e0d-8f3d-4fc4-9776-f2f08715fdc2)
+
+### Web Client
+
+The web client at https://rustdesk.com/web/ should work now as routes for the websocket ports are preconfigured now.
 
 ## Uninstall
 
