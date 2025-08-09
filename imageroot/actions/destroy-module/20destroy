@@ -27,7 +27,7 @@ response = agent.tasks.run(
     agent_id=default_traefik_id,
     action='delete-route',
     data={
-        'instance': os.environ['MODULE_ID'+'-id']
+        'instance': os.environ['MODULE_ID']+'-id'
     },
 )
 
@@ -38,7 +38,7 @@ response = agent.tasks.run(
     agent_id=default_traefik_id,
     action='delete-route',
     data={
-        'instance': os.environ['MODULE_ID'+'-relay']
+        'instance': os.environ['MODULE_ID']+'-relay'
     },
 )
 
