@@ -1,19 +1,23 @@
 {
-  "name": "rustdesk",
+  "name": "RustDesk Server",
   "description": {
-    "en": "My rustdesk module"
+    "en": "RustDesk Server is the self-hosted backend software for RustDesk, allowing you to run your own private connection and relay infrastructure for remote desktop access instead of using public cloud servers",
+    "de": "RustDesk Server ist die selbstgehostete Backend-Software für RustDesk; sie ermöglicht es Ihnen, eine eigene private Verbindungs- und Relay-Infrastruktur für den Fernzugriff auf Desktops zu betreiben, anstatt auf öffentliche Cloud-Server zurückzugreifen",
+    "fr": "RustDesk Server est le logiciel backend auto-hébergé de RustDesk ; il vous permet de déployer votre propre infrastructure privée de connexion et de relais pour l'accès au bureau à distance, plutôt que de recourir à des serveurs cloud publics",
+    "it": "RustDesk Server è il software backend self-hosted per RustDesk, che ti consente di gestire una tua infrastruttura privata per le connessioni e il relay necessari all'accesso desktop remoto, anziché utilizzare server cloud pubblici",
+    "es": "RustDesk Server es el software backend autohospedado para RustDesk, que te permite ejecutar tu propia infraestructura privada de conexión y retransmisión para el acceso a escritorios remotos, en lugar de utilizar servidores en la nube pública"
   },
-  "categories": [],
+  "categories": ["system_administration"],
   "authors": [
     {
-      "name": "Name Surname",
-      "email": "author@yourmail.org"
+      "name": "Markus Neuberger",
+      "email": "dev@markusneuberger.at"
     }
   ],
   "docs": {
-    "documentation_url": "https://docs.rustdesk.com/",
-    "bug_url": "https://github.com/NethServer/dev",
-    "code_url": "https://github.com/author/ns8-rustdesk"
+    "documentation_url": "https://rustdesk.com/docs/en/",
+    "bug_url": "https://community.nethserver.org",
+    "code_url": "https://github.com/mrmarkuz/ns8-rustdesk"
   },
-  "source": "ghcr.io/nethserver/rustdesk"
+  "source": "ghcr.io/mrmarkuz/rustdesk"
 }

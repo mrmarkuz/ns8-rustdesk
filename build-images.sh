@@ -21,7 +21,7 @@ container=$(buildah from scratch)
 # Reuse existing nodebuilder-rustdesk container, to speed up builds
 if ! buildah containers --format "{{.ContainerName}}" | grep -q nodebuilder-rustdesk; then
     echo "Pulling NodeJS runtime..."
-    buildah from --name nodebuilder-rustdesk -v "${PWD}:/usr/src:Z" docker.io/library/node:lts
+    buildah from --name nodebuilder-rustdesk -v "${PWD}:/usr/src:Z" docker.io/library/node:24.22.2
 fi
 
 echo "Build static UI files with node..."
@@ -39,6 +39,7 @@ buildah config --entrypoint=/ \
     --label="org.nethserver.authorizations=traefik@node:routeadm node:fwadm" \
     --label="org.nethserver.tcp-ports-demand=0" \
     --label="org.nethserver.rootfull=0" \
+	--label="org.nethserver.min-core=3.12.4-0" \
     --label="org.nethserver.images=docker.io/rustdesk/rustdesk-server-s6:1.1.16" \
     "${container}"
 # Commit the image
