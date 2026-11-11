@@ -21,7 +21,7 @@ container=$(buildah from scratch)
 # Reuse existing nodebuilder-rustdesk container, to speed up builds
 if ! buildah containers --format "{{.ContainerName}}" | grep -q nodebuilder-rustdesk; then
     echo "Pulling NodeJS runtime..."
-    buildah from --name nodebuilder-rustdesk -v "${PWD}:/usr/src:Z" docker.io/library/node:24.22.2
+    buildah from --name nodebuilder-rustdesk -v "${PWD}:/usr/src:Z" docker.io/library/node:26.13.0
 fi
 
 echo "Build static UI files with node..."
